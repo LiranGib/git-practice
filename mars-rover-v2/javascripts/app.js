@@ -3,10 +3,11 @@
 var rover={direction: "N", x:0, y:0, travelLog: []}; //Initial conditions
 
 function commands(rovCommands){
-  for (var i =0; i <= rovCommands.length-1; i++){
-    rovCommands[i] == "r"? (turnRight(rover))
+  for (var i =0; i <= rovCommands.length-1; i++){   // (f)orward, (r)ight, or (l)eft (b)ackword
+    rovCommands[i] == "r"? (turnRight(rover)) 
     :rovCommands[i] == "l"? (turnLeft(rover))
     :rovCommands[i] == "f" ? (rover.travelLog.push("x: "+rover.x + " y:" + rover.y), moveForward(rover))
+    :rovCommands[i] == "b" ? (rover.travelLog.push("x: "+rover.x + " y:" + rover.y), moveBackward(rover))
     :console.log("WARNING - invalid command detected!!");
   }
    console.log(rover.travelLog);
@@ -73,7 +74,29 @@ function moveForward(rover){
   console.log("moveForward was called!" + " rover new coordinates:  " + "x: "+ xCoordinate + " y: " + yCoordinate);
 }
 
-commands("rfrfflfrff")
+function moveBackward(rover){
+  var yCoordinate = rover.y;
+  var xCoordinate = rover.x;
+  var rovCardinalDirections = rover.direction;
+
+  switch (rovCardinalDirections) {
+  case "N": yCoordinate++;
+  break;
+  case "E": xCoordinate--;
+  break;
+  case "S": yCoordinate--;
+  break;
+  case "W": xCoordinate++;
+  break;
+  }
+  rover.y = yCoordinate;
+  rover.x = xCoordinate;
+
+  
+  console.log("moveBackward was called!" + " rover new coordinates:  " + "x: "+ xCoordinate + " y: " + yCoordinate);
+}
+
+commands("rfrfflfbrff")
 
 
 
