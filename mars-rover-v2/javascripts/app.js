@@ -1,16 +1,45 @@
 // Rover Object Goes Here
 // ======================
 var rover={direction: "N", x:0, y:0, travelLog: []}; //Initial conditions
+var boundariesForward = [["0W", "10E"], ["0N", "10S"]];
+var boundariesBackward = [["0E", "10W"],["0S", "10N"]];
+
 
 function commands(rovCommands){
-  for (var i =0; i <= rovCommands.length-1; i++){   // (f)orward, (r)ight, or (l)eft (b)ackword
-    rovCommands[i] == "r"? (turnRight(rover)) 
-    :rovCommands[i] == "l"? (turnLeft(rover))
-    :rovCommands[i] == "f" ? (rover.travelLog.push("x: "+rover.x + " y:" + rover.y), moveForward(rover))
-    :rovCommands[i] == "b" ? (rover.travelLog.push("x: "+rover.x + " y:" + rover.y), moveBackward(rover))
-    :console.log("WARNING - invalid command detected!!");
+ 
+  rovCommands = rovCommands.toLowerCase();             // converting command input to lower-case to eliminate typing errors.
+  for (var i =0; i <= rovCommands.length-1; i++){     // (f)orward, (r)ight, or (l)eft (b)ackword
+    
+   if (rovCommands[i] ==="r"){
+     turnRight(rover);
+     
+   }else if (rovCommands[i] === "l"){
+     turnLeft(rover);
+     
+   }else if (rovCommands[i] === "f"){
+  
+     if(!boundariesForward[0].includes(rover.x + rover.direction) && !boundariesForward[1].includes(rover.y + rover.direction)){
+       rover.travelLog.push("x: "+rover.x + " y:" + rover.y);
+       moveForward(rover);
+     }else{
+       console.log("Can't forward, coordinates out of boundaries");
+     }
+     
+   }else if (rovCommands[i] === "b"){
+     if(!boundariesBackward[0].includes(rover.x + rover.direction) && !boundariesBackward[1].includes(rover.y + rover.direction)){
+       rover.travelLog.push("x: "+rover.x + " y:" + rover.y);
+       moveBackward(rover);
+     }else{
+       console.log("Can't backward, coordinates out of boundaries");
+     }
+     
+     
+   }else{
+     console.log("WARNING - invalid command detected!!");
+   }
   }
-   console.log(rover.travelLog);
+  
+  console.log(rover.travelLog);
 }
 
 
@@ -96,7 +125,7 @@ function moveBackward(rover){
   console.log("moveBackward was called!" + " rover new coordinates:  " + "x: "+ xCoordinate + " y: " + yCoordinate);
 }
 
-commands("rfrfflfbrff")
+commands("flflf");
 
 
 
