@@ -1,9 +1,10 @@
 // Rover Object Goes Here
 // ======================
-var rover={direction: "N", x:0, y:0, travelLog: []}; //Initial conditions
-var boundariesForward = [["0W", "10E"], ["0N", "10S"]];
-var boundariesBackward = [["0E", "10W"],["0S", "10N"]];
+var rover={direction: "N", x:0, y:0, travelLog: []};       //Initial conditions
+var grid = {x:10, y:10};                                  //setting the rover grid
 
+var boundariesForward = [["0W", (grid.x+"E")], ["0N", (grid.y+"E")]];
+var boundariesBackward = [["0E", (grid.x+"W")],["0S", (grid.y+"N")]];
 
 function commands(rovCommands){
  
@@ -32,16 +33,13 @@ function commands(rovCommands){
      }else{
        console.log("Can't backward, coordinates out of boundaries");
      }
-     
-     
+        
    }else{
      console.log("WARNING - invalid command detected!!");
    }
   }
-  
   console.log(rover.travelLog);
 }
-
 
 
 // ======================
@@ -58,8 +56,7 @@ function turnLeft(rover){
   break;
   }
   
-  rover.direction = rovCardinalDirections;
-  
+  rover.direction = rovCardinalDirections; 
   console.log("turnLeft was called!" + " rover facing " + rovCardinalDirections);
 }
 
@@ -76,8 +73,6 @@ function turnRight(rover){
   break;
   }
   rover.direction = rovCardinalDirections;
-
-  
   console.log("turnRight was called!" + " rover facing " + rovCardinalDirections);
 }
 
@@ -98,8 +93,6 @@ function moveForward(rover){
   }
   rover.y = yCoordinate;
   rover.x = xCoordinate;
-
-  
   console.log("moveForward was called!" + " rover new coordinates:  " + "x: "+ xCoordinate + " y: " + yCoordinate);
 }
 
@@ -119,13 +112,11 @@ function moveBackward(rover){
   break;
   }
   rover.y = yCoordinate;
-  rover.x = xCoordinate;
-
-  
+  rover.x = xCoordinate;  
   console.log("moveBackward was called!" + " rover new coordinates:  " + "x: "+ xCoordinate + " y: " + yCoordinate);
 }
 
-commands("flflf");
+commands("flflf"); //commands for testing purposes
 
 
 
