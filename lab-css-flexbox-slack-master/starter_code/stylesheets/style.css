@@ -283,6 +283,7 @@ footer span{
     }
     .fr{float:right;}
     .fl{float: left;}
+    .clear{clear:both;}
 
     .termsil{
         font-size: 1.5vw;
