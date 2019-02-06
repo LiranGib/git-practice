@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     function GameOn(){  
         $('.panel').css({"pointer-events":"none"})
-        let promises = []
+        let promises = [];
        
         for(let i=0; i < numberOfGames; i ++){
             let promise = new Promise(function(resolve, reject){
