@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: gold;
+    font-size: 48px;
+    position: absolute;
+    left: 33%;
+    top: 5%;
+}
+.startBtn{
+    position: absolute;
+    right: 0;
+    top: 12%;
+    right: 3%;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: white;
+    width: 100px;
+    height: 100px
+}
+.startBtn:active,.startBtn.active{
+    background-color: rgb(185, 255, 72);
+    font-weight: 800;
+}
+
+#round{
+    position: absolute;
+    top: 27%;
+    right: 6%;
+    font-size: 40px;
+    background-color: white;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    padding-top:1%;
+}
+
+
+.container{
+    margin: 5px;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    margin: auto;
+    background-color: rgb(26, 26, 26);
+}
+
+.outerCircle {
+    background-color: rgb(26, 26, 26);
+    border:1px solid gba(134, 134, 134);
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    top: 19%;
+}
+#innerCircel {
+    background-color: rgb(124, 124, 124);
+    border: 2px solid rgba(134, 134, 134);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 36.5%;
+    left: 36.5%;
+    box-sizing: border-box;
+    padding: 0 1px 1px 0;
+}
+
+.lightBlue{
+    background-color: rgb(31, 102, 255);
+    border: 3px solid rgb(26, 26, 26);
+    border-top-left-radius: 100%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    box-sizing: border-box;
+}
+.lightBlue:active, .lightBlue.active{
+    background-color: rgb(161, 211, 252);
+    transform: scale(1.05);
+}
+
+.lightGreen{
+    background-color: rgb(0, 168, 22);
+    border: 3px solid rgb(26, 26, 26);
+    border-top-right-radius: 100%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    box-sizing: border-box;
+}
+.lightGreen:active, .lightGreen.active{
+    background-color: rgb(173, 255, 173);
+    transform: scale(1.05);
+}
+
+.lightYellow{
+    background-color: rgb(255, 238, 0);
+    border: 3px solid rgb(26, 26, 26);
+    border-bottom-left-radius: 100%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    box-sizing: border-box;
+}
+.lightYellow:active, .lightYellow.active{
+    background-color: rgb(255, 253, 136);
+    transform: scale(1.05);
+}
+
+.lightRed{
+    background-color: rgb(255, 9, 42);
+    border: 3px solid rgb(26, 26, 26);
+    border-bottom-right-radius: 100%;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+}
+.lightRed:active, .lightRed.active{
+    background-color: rgb(255, 158, 94);
+    transform: scale(1.05);
+}
