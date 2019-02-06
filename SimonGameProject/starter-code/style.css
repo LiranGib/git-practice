@@ -11,30 +11,36 @@ h1{
 }
 .startBtn{
     position: absolute;
-    right: 0;
-    top: 12%;
-    right: 3%;
-    border-radius: 50px;
-    font-size: 20px;
-    background-color: white;
-    width: 100px;
-    height: 100px
+    top: 36%;
+    left: 43%;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgb(110, 110, 110);
+    color: red;
+    width: 113px;
+    height: 57px;
+    font-family: 'Segment7Standard'; 
 }
 .startBtn:active,.startBtn.active{
-    background-color: rgb(185, 255, 72);
+    background-color: rgb(133, 197, 30);
     font-weight: 800;
 }
 
 #round{
     position: absolute;
-    top: 27%;
-    right: 6%;
+    top: 47%;
+    left: 46.5%;
     font-size: 40px;
-    background-color: white;
+    background-color: rgb(70, 70, 70);
+    color:red;
     width: 60px;
     height: 50px;
     text-align: center;
-    padding-top:1%;
+    padding-top:3%;
+    border-radius: 8px;
+    font-family: 'Segment7Standard'; 
+    font-weight: bold; 
+    font-style: italic; 
 }
 
 
@@ -57,15 +63,19 @@ h1{
     margin: auto;
     top: 19%;
 }
+.transform:active, .transform.active{
+    transform: rotate(360deg);
+    transition: all 10s ease-in-out;
+}
 #innerCircel {
-    background-color: rgb(124, 124, 124);
+    background-color: rgb(201, 201, 201);
     border: 2px solid rgba(134, 134, 134);
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     position: absolute;
-    top: 36.5%;
-    left: 36.5%;
+    top: 20.5%;
+    left: 20.5%;
     box-sizing: border-box;
     padding: 0 1px 1px 0;
 }

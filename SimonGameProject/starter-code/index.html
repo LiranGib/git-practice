@@ -3,20 +3,22 @@
   <head>
     <title>Project Title</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+
   </head>
 
   <body>
     <header class="container">
         <h1>Simon Game</h1>
-        <div><button class="startBtn">START</button></div>
-        <div id="round" type="text"></div>
-        <div class="outerCircle">
+        <div class="outerCircle transform">
           <div id ="blue" class ="panel lightBlue"></div>  
           <div id ="green" class ="panel lightGreen"></div>  
           <div id ="yellow" class="panel lightYellow"></div>  
           <div id ="red" class="panel lightRed"></div>
           <div id ="innerCircel"></div>  
         </div>
+        <div><button class="startBtn">START</button></div>
+        <div id="round" type="text"></div>
     </header>
     
     <audio id="track1" class="audio blue">
