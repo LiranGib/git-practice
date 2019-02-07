@@ -33,24 +33,28 @@ $(document).ready(function(){
         return randomArray;
     }
 
-    function spin(){
-        if(round == 1 && round <= 4){ 
-            $('#spin').css({"animation-duration": "20s"});
-        }else if(round == 5){
-            $('#spin').css({"animation-duration": "17s"});
-        }else if(round == 6){
-            $('#spin').css({"animation-duration": "16s"});
-        }else if(round == 7){
-            $('#spin').css({"animation-duration": "15s"});
-        }else if(round == 8){
-            $('#spin').css({"animation-duration": "14s"});
-        }else if(round == 9){
-            $('#spin').css({"animation-duration": "13s"});
-        }else{
-            $('#spin').css({"animation-duration": "12s"});
-        } 
-    };
+    // function spin(){
+    //     if(round <= 4){ 
+    //         $('#spin').css({"animation-duration": "20s"});
+    //     }else if(round == 5){
+    //         $('#spin').css({"animation-duration": "17s"});
+    //     }else if(round == 6){
+    //         $('#spin').css({"animation-duration": "15s"});
+    //     }else if(round == 7){
+    //         $('#spin').css({"animation-duration": "13s"});
+    //     }else if(round == 8){
+    //         $('#spin').css({"animation-duration": "12s"});
+    //     }else if(round == 9){
+    //         $('#spin').css({"animation-duration": "10s"});
+    //     }else{
+    //         $('#spin').css({"animation-duration": "8s"});
+    //     } 
+    // };
         
+    function spin(){
+        $('#spin').css({"animation-duration": 20/(round)+'s'});
+
+    }
         // }else if(round ==7 && round <= 8 ){
         //     $('#spin').css({"animation-duration": "15s"});
         // }else if(round > 8 && round < 10){
@@ -69,14 +73,17 @@ $(document).ready(function(){
         for(let j=0; j < round; j++){
         
             setTimeout(function(){
-                $('.audio').eq(randomArray[j])[0].play();
+                //$('.audio').eq(randomArray[j])[0].play();
                 $('.panel').eq(randomArray[j]).toggleClass('active');
                 setTimeout(function(){
                     $('.panel').eq(randomArray[j]).toggleClass('active'); // deactivating the class
                 }, 500);
             }, j*1000);
             };
-        $('.panel').css({"pointer-events":"auto"})
+        
+            setTimeout(function(){
+                $('.panel').css({"pointer-events":"auto"})
+            },(round-1)*1001)
     }
 
     // validate user input 
@@ -94,6 +101,7 @@ $(document).ready(function(){
             }       
         }else{
             window.alert('wrong, game over');
+            $('.crazy').toggleClass('active');
             reset()
         }
     }

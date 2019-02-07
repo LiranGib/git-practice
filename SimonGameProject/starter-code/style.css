@@ -103,8 +103,8 @@ h1{
     box-sizing: border-box;
 }
 .lightBlue:active, .lightBlue.active{
-    background-color: rgb(161, 211, 252);
-    transform: scale(1.05);
+    background-color: rgb(247, 239, 239);
+    transform: scale(1.08);
 }
 
 .lightGreen{
@@ -119,8 +119,8 @@ h1{
     box-sizing: border-box;
 }
 .lightGreen:active, .lightGreen.active{
-    background-color: rgb(173, 255, 173);
-    transform: scale(1.05);
+    background-color: rgb(247, 239, 239);
+    transform: scale(1.08);
 }
 
 .lightYellow{
@@ -135,8 +135,8 @@ h1{
     box-sizing: border-box;
 }
 .lightYellow:active, .lightYellow.active{
-    background-color: rgb(255, 253, 136);
-    transform: scale(1.05);
+    background-color: rgb(247, 239, 239);
+    transform: scale(1.08);
 }
 
 .lightRed{
@@ -151,7 +151,7 @@ h1{
     box-sizing: border-box;
 }
 .lightRed:active, .lightRed.active{
-    background-color: rgb(255, 158, 94);
-    transform: scale(1.05);
+    background-color: rgb(247, 239, 239);
+    transform: scale(1.08);
 }
   
