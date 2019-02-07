@@ -2,17 +2,22 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-image: url("https://media.giphy.com/media/xiRWsByXkxT1e/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 h1{
     color: gold;
     font-size: 48px;
     position: absolute;
-    left: 33%;
-    top: 5%;
+    left: 32%;
+    top: 8%;
 }
 .startBtn{
     position: absolute;
-    top: 36%;
-    left: 43%;
+    top: 39%;
+    left: 42%;
     border-radius: 10px;
     font-size: 30px;
     background-color: rgb(110, 110, 110);
@@ -28,7 +33,7 @@ h1{
 
 #round{
     position: absolute;
-    top: 47%;
+    top: 52%;
     left: 46.5%;
     font-size: 40px;
     background-color: rgb(70, 70, 70);
@@ -46,8 +51,9 @@ h1{
 
 .container{
     margin: 5px;
-    width: 800px;
-    height: 800px;
+    width: 626px;
+    height: 674px;
+    border-radius: 50%;
     position: relative;
     margin: auto;
     background-color: rgb(26, 26, 26);
@@ -63,10 +69,14 @@ h1{
     margin: auto;
     top: 19%;
 }
-.transform:active, .transform.active{
-    transform: rotate(360deg);
-    transition: all 10s ease-in-out;
+#spin{
+    animation: spin infinite linear;
+    animation-duration: 20s;
 }
+  @keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg)}
+  }
 #innerCircel {
     background-color: rgb(201, 201, 201);
     border: 2px solid rgba(134, 134, 134);
@@ -143,3 +153,4 @@ h1{
     background-color: rgb(255, 158, 94);
     transform: scale(1.05);
 }
+  
