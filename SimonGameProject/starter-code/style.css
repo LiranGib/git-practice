@@ -1,8 +1,9 @@
+
 *{
     padding: 0;
     margin: 0;
 }
-body{
+.crazy:active, .crazy.active{
     background-image: url("https://media.giphy.com/media/xiRWsByXkxT1e/giphy.gif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,8 +52,8 @@ h1{
 
 .container{
     margin: 5px;
-    width: 626px;
-    height: 674px;
+    width: 673px;
+    height: 784px;
     border-radius: 50%;
     position: relative;
     margin: auto;

@@ -5,7 +5,6 @@ $(document).ready(function(){
     let randomArray = [];
     let playerArray = [];
     let numberOfGames = 10;
-
     
     function reset(){
         randomArray = [];
@@ -16,8 +15,9 @@ $(document).ready(function(){
 
     $('.startBtn').click(function(){
         $('#round').text(round);
+        $('.techno')[0].play();
+        $('.crazy').toggleClass('active');
         reset();
-        start = true;
         gameOn();  
     });
 
@@ -51,8 +51,6 @@ $(document).ready(function(){
         } 
     };
         
-        
-        
         // }else if(round ==7 && round <= 8 ){
         //     $('#spin').css({"animation-duration": "15s"});
         // }else if(round > 8 && round < 10){
@@ -62,11 +60,10 @@ $(document).ready(function(){
         // }    
     // };
 
-
     function gameOn(){
         $('#round').text(round);
         spin(); 
-        randArray(); 
+        randArray();
         $('.panel').css({"pointer-events":"none"})
      
         for(let j=0; j < round; j++){
