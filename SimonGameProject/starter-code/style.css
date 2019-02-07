@@ -34,8 +34,8 @@ h1{
 
 #round{
     position: absolute;
-    top: 52%;
-    left: 46.5%;
+    top: 50%;
+    left: 45.5%;
     font-size: 40px;
     background-color: rgb(70, 70, 70);
     color:red;
@@ -57,7 +57,7 @@ h1{
     border-radius: 50%;
     position: relative;
     margin: auto;
-    background-color: rgb(26, 26, 26);
+    background-color: rgba(26, 26, 26, 0.5);
 }
 
 .outerCircle {
@@ -79,7 +79,7 @@ h1{
     to {transform: rotate(360deg)}
   }
 #innerCircel {
-    background-color: rgb(201, 201, 201);
+    background-color: currentColor;
     border: 2px solid rgba(134, 134, 134);
     border-radius: 50%;
     width: 300px;
