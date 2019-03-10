@@ -1,0 +1,36 @@
+
+.text-center{
+    color: rgb(168, 167, 167);
+  text-align: center;
+  position: absolute;
+  top: 25%;
+}
+/* 
+.info-row{
+  background-color: rgb(249, 107, 97);
+  color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.info-row h3{
+    font-size: 20px;
+    justify-content: space-between;
+}
+.info-row p{
+    font-size: 12px;
+} */
+
+.main-img{
+  background-image: url('./img/slider-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+  color: white;
+  filter: grayscale();
+  font-size: 16px;
+}
+img{
+  max-width: 100px;
+}
